@@ -8,7 +8,7 @@ export const Footer: React.FunctionComponent = () => {
                     © {new Date().getFullYear()} Copyright Text
                     <a
                         className="grey-text text-lighten-4 right"
-                        href="https://github.com/Andrey-Golubenko/react-game-shop.git"
+                        href="https://andrey-golubenko.github.io/react-food/"
                         target="_blank"
                         rel="noreferrer"
                     >Repo</a>
