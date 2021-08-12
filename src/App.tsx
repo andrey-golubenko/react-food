@@ -1,26 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import {Header} from './components/Header';
+import {Footer} from './components/Footer'
 
-function App() {
+import {Home} from './pages/Home';
+import {About} from './pages/About';
+import {Contacts} from './pages/Contacts'
+import {Category} from './pages/Category'
+import {NotFound} from './pages/NotFound'
+import {SingleMeal} from './pages/SingleMeal'
+
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+        <Router basename="/react-food">
+            <Header />
+                <main className="container content">
+                    <Switch>
+                        <Route exact path="/" component={ Home } />
+                        <Route path="/about" component={ About } />
+                        <Route path="/contacts" component={ Contacts } />
+                        <Route path="/category/:name" component={ Category } />
+                        <Route path="/meal/:id" component={ SingleMeal }/>
+                        <Route component={ NotFound } />
+                    </Switch>
+                </main>
+            <Footer />
+        </Router>
+    </>
   );
-}
+};
 
 export default App;
