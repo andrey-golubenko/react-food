@@ -1,6 +1,6 @@
 import React from 'react'
-import {ICategoryListProps} from '../interfaces';
-import {CategoryItem} from './CategoryItem';
+import { ICategoryListProps } from '../interfaces';
+import { CategoryItem } from './CategoryItem';
 
 export const CategoryList: React.FC<ICategoryListProps> = ({catalog = []}) => {
 

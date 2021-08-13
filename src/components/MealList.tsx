@@ -1,6 +1,6 @@
 import React from 'react'
-import {IMealListProps} from '../interfaces'
-import {MealItem} from './MealItem'
+import { IMealListProps } from '../interfaces'
+import { MealItem } from './MealItem'
 
 
 export const MealList: React.FC <IMealListProps>= ({ meals = [] }) => {

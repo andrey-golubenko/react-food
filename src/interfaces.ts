@@ -79,3 +79,9 @@ export interface ISingleMeal {
 export interface ISearchProp {
     cb: (searchVal: string) => void
 }
+
+export interface ILoadableImageProps {
+    src: string
+    alt?: string
+    onLoad?(): void
+}

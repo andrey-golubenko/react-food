@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from 'react'
-import {useLocation, useHistory} from 'react-router-dom'
-import {Preloader} from '../components/Preloader'
-import {getAllCategories} from '../api'
-import {CategoryList} from '../components/CategoryList'
-import {Search} from '../components/Search'
-import {ICatalogItem} from '../interfaces'
+import React, { useState, useEffect } from 'react'
+import { useLocation, useHistory } from 'react-router-dom'
+import { Preloader } from '../components/Preloader'
+import { getAllCategories } from '../api'
+import { CategoryList } from '../components/CategoryList'
+import { Search } from '../components/Search'
+import { ICatalogItem } from '../interfaces'
 
 export const Home: React.FC = () => {
     const [catalog, setCatalog] = useState<ICatalogItem[]>([]);

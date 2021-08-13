@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from 'react'
-import {useParams} from 'react-router-dom'
-import {getFilteredCategory} from '../api'
-import {Preloader} from '../components/Preloader'
-import {MealList} from '../components/MealList'
-import {IMealsItem} from '../interfaces'
+import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+import { getFilteredCategory } from '../api'
+import { Preloader } from '../components/Preloader'
+import { MealList } from '../components/MealList'
+import { IMealsItem } from '../interfaces'
 
 
 export const Category: React.FC = () => {

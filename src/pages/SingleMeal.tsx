@@ -1,8 +1,9 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams, useHistory } from 'react-router-dom'
 import { getMealById } from '../api'
 import { ISingleMeal } from '../interfaces'
 import { Preloader } from '../components/Preloader'
+import { LoadableImage } from '../components/LoadableImage/LoadableImage'
 
 
 export const SingleMeal: React.FC = () => {
@@ -19,12 +20,12 @@ export const SingleMeal: React.FC = () => {
         <>
             { !singleMeal.idMeal ? <Preloader /> : (
                 <div className="singleMeal">
-                    <img src={singleMeal.strMealThumb} alt=""/>
-                    <h2>{singleMeal.strMeal}</h2>
-                    <h5>Category : {singleMeal.strCategory}</h5>
-                    { singleMeal.strArea ? <h5>Area from : {singleMeal.strArea}</h5> : null}
+                    <LoadableImage src={ singleMeal.strMealThumb! }/>
+                    <h3>{ singleMeal.strMeal }</h3>
+                    <h5>Category : { singleMeal.strCategory }</h5>
+                    { singleMeal.strArea ? <h5>Area from : { singleMeal.strArea }</h5> : null}
                     <h5>Cooking instructions :</h5>
-                    <p>{singleMeal.strInstructions}</p>
+                    <p>{ singleMeal.strInstructions }</p>
                     <table>
                         <thead>
                         <tr>
@@ -53,7 +54,7 @@ export const SingleMeal: React.FC = () => {
                         <h5 style={{ margin: '2rem 0 1.5 rem' }}>Recipe video : </h5>
                             <iframe
                                 title={ id }
-                                src={`https://www.youtube.com/embed/${singleMeal.strYoutube.slice(-11)}`}
+                                src={`https://www.youtube.com/embed/${ singleMeal.strYoutube.slice(-11) }`}
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen
@@ -63,7 +64,6 @@ export const SingleMeal: React.FC = () => {
 
             </div>) }
             <button className="btn" onClick={ goBack }>Go Back</button>
-
         </>
     )
 };

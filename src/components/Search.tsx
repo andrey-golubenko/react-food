@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import {ISearchProp} from '../interfaces'
+import React, { useState } from 'react'
+import { ISearchProp } from '../interfaces'
 
 
 export const Search: React.FC <ISearchProp> = ({ cb = () => {} }) => {
@@ -12,7 +12,8 @@ export const Search: React.FC <ISearchProp> = ({ cb = () => {} }) => {
     };
 
     const handleSubmit = () => {
-        cb(searchVal)
+        cb(searchVal);
+        setSearchVal('');
     };
 
     return (
@@ -20,7 +21,7 @@ export const Search: React.FC <ISearchProp> = ({ cb = () => {} }) => {
             <div className="input-field search-field">
                 <input
                     type="search"
-                    placeholder="search"
+                    placeholder="search category"
                     onKeyPress={ handleKey }
                     onChange={ (e) => {setSearchVal(e.target.value)}}
                     value={ searchVal }

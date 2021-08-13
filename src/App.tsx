@@ -1,14 +1,13 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import {Header} from './components/Header';
-import {Footer} from './components/Footer'
-
-import {Home} from './pages/Home';
-import {About} from './pages/About';
-import {Contacts} from './pages/Contacts'
-import {Category} from './pages/Category'
-import {NotFound} from './pages/NotFound'
-import {SingleMeal} from './pages/SingleMeal'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Header } from './components/Header';
+import { Footer } from './components/Footer'
+import { Home } from './pages/Home';
+import { About } from './pages/About';
+import { Contacts } from './pages/Contacts'
+import { Category } from './pages/Category'
+import { NotFound } from './pages/NotFound'
+import { SingleMeal } from './pages/SingleMeal'
 
 
 const App: React.FC = () => {
