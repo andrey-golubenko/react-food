@@ -1,0 +1,19 @@
+@media (min-width: 768px) {
+    .mealMainDescription {
+        display: block;
+    }
+    .mealMainDescriptionImg {
+        width: 40%;
+        float: left;
+        margin: 0 2rem .2rem 0;
+    }
+}
+
+.mealMainDescriptionInstruction {
+    text-align: justify;
+    font-size: 1.1rem;
+}
+
+.mealIngredients {
+    margin-bottom: 2rem;
+}

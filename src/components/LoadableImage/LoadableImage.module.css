@@ -3,7 +3,7 @@
     overflow: hidden;
     position: relative;
     box-sizing: border-box;
-    min-height: 282px;
+    min-height: 270px;
 }
 
 .container::before {
@@ -29,17 +29,16 @@
 
 .containerLoaded::before {
     animation: none;
-    background: rgba(0, 0, 0, 0);
 }
 
 .containerLoaded {
-    background: rgba(0, 0, 0, 0);
+    background: unset;
 }
 
 .image {
     opacity: 0;
     width: 100%;
-    min-height: 282px;
+    min-height: 270px;
     object-fit: cover;
     transition: opacity .5s ease-in-out;
 }

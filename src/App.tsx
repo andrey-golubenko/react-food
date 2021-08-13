@@ -7,7 +7,7 @@ import { About } from './pages/About';
 import { Contacts } from './pages/Contacts'
 import { Category } from './pages/Category'
 import { NotFound } from './pages/NotFound'
-import { SingleMeal } from './pages/SingleMeal'
+import { SingleMeal } from './pages/SingleMeal/SingleMeal'
 
 
 const App: React.FC = () => {
