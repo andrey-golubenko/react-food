@@ -20,8 +20,9 @@ export const SingleMeal: React.FC = () => {
         <>
             { !singleMeal.idMeal ? <Preloader /> : (
                 <div className="singleMeal">
+                    div
                     <LoadableImage src={ singleMeal.strMealThumb! }/>
-                    <h3>{ singleMeal.strMeal }</h3>
+                    <h4>{ singleMeal.strMeal }</h4>
                     <h5>Category : { singleMeal.strCategory }</h5>
                     { singleMeal.strArea ? <h5>Area from : { singleMeal.strArea }</h5> : null}
                     <h5>Cooking instructions :</h5>
